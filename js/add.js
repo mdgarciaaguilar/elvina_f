@@ -14,7 +14,7 @@ $('#signup_button').on('click', function(){
   json_to_send = JSON.stringify(json_to_send);
 
   $.ajax({
-    url: 'https://elvina-pasteleria-back.herokuapp.com/products',
+    url: 'https://elvina-pasteleria-back.herokuapp.com/products/' ,
     //url: 'http://localhost:3000/products',
 
     headers: {
@@ -26,7 +26,7 @@ $('#signup_button').on('click', function(){
     success: function(data){
       alert("Producto creado con exito");
       console.log('success: '+ data);
-      window.location = './signup.html'
+      window.location = './index.html'
     },
     error: function(error_msg) {
       alert((error_msg['responseText']));
@@ -34,3 +34,15 @@ $('#signup_button').on('click', function(){
   });
 
 });
+
+
+$('#get_button').on('click', function(){
+  window.location = './index.html'
+})
+
+$('#update_button').on('click', function(){
+  window.location = './update.html'
+})
+$('#delete_button').on('click', function(){
+  window.location = './delete.html'
+})

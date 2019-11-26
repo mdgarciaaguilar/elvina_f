@@ -65,6 +65,10 @@ input {
   width: 300px;
 }
 
+.listReq {
+  padding-bottom: 25px;
+}
+
 button {
   font-size: 15px;
   color: #ffffff;
